@@ -40,7 +40,7 @@ namespace API_Angular.Controllers
             return Ok(await _funcionarioInterface.UpdateFuncionario(editFuncionario));
         }
 
-        [HttpPut("InativaFuncionario")]
+        [HttpPut("InativaFuncionario/{id}")]
         public async Task<ActionResult<ServiceResponse<List<FuncionarioModel>>>> InativaFuncionario(int id)
         {
             return Ok(await _funcionarioInterface.InativaFuncionario(id));

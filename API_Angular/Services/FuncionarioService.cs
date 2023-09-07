@@ -63,7 +63,7 @@ namespace API_Angular.Services
                     return serviceResponse;
                 }
 
-                _context.Funcionarios.Add(funcionario);
+                _context.Funcionarios.Remove(funcionario);
                 await _context.SaveChangesAsync();
 
                 serviceResponse.Dados = _context.Funcionarios.ToList();
